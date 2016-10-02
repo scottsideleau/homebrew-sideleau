@@ -41,7 +41,7 @@
   pip3.5 install pygit2
   ```
 
-7. Download gitless tarball and manually install (via easy_install).
+7. Download gitless tarball and manually install (via Python easy_install).
 
   ```bash
   wget -c https://github.com/scottsideleau/gitless/archive/master.tar.gz
