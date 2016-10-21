@@ -44,7 +44,7 @@
 7. Download gitless tarball and manually install (via Python easy_install).
 
   ```bash
-  wget -c https://github.com/scottsideleau/gitless/archive/master.tar.gz
-  tar xzvf master.tar.gz
+  wget -c https://github.com/sdg-mit/gitless/archive/v0.8.4.tar.gz 
+  tar xzvf v0.8.4.tar.gz
   python3.5 setup.py install
   ```
