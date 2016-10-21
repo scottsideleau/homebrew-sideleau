@@ -1,13 +1,9 @@
 class Gitless < Formula
-  # Bottle should work on MacOS < 10.11 (El Capitan), but fails in 10.11
-  # due to the introduction of SIP protection on python/site-packages paths.
   desc "Experimental version control system built on top of Git."
   homepage "http://gitless.com"
-  url "https://github.com/scottsideleau/gitless/archive/master.tar.gz"
-  version "0.8.3-1"
-  sha256 "146fdf96774b39b93549d23bb4a453edc8a4f5a8881823f2a83998eaab3b89da"
+  url "https://github.com/sdg-mit/gitless/archive/v0.8.4.tar.gz"
+  sha256 "ecde4887eb20109a0345a1bfee420140522f981deff335d552908a00952853c8"
 
-  depends_on "python"
   depends_on "python3"
   depends_on "git"
   depends_on "libgit2"
@@ -19,8 +15,8 @@ class Gitless < Formula
     ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python#{version}/site-packages"
     ENV.prepend_create_path "PYTHONPATH", "#{HOMEBREW_PREFIX}/lib/python#{version}/site-packages"
 
-    system "pip3.5", "install", "pygit2"
-    system "pip3.5", "install", "."
+    system "pip3", "install", "pygit2"
+    system "python3", "setup.py", "install"
   end
 
   test do
